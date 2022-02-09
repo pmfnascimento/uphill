@@ -30,9 +30,9 @@
 
 <code>php artisan passport:install</code><br>
 
-<code>php artisan db:seed</code><br>
-
 <code>php artisan storage:link</code><br>
+
+<code>php artisan db:seed</code><br>
 
 and finnaly run:
 
