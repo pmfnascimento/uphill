@@ -29,7 +29,7 @@ frontend/!.vscode/extensions.json
 frontend/.history/*
 
 # Miscellaneous
-frontend//.angular/cache
+frontend/.angular/cache
 frontend/.sass-cache/
 frontend/connect.lock
 frontend/coverage
@@ -44,7 +44,6 @@ frontend/Thumbs.db
 
 backend/node_modules
 backend/public/hot
-backend/public/storage
 backend/storage/*.key
 backend/vendor
 backend.env
