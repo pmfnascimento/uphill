@@ -1,10 +1,10 @@
-# For the Backend:
+# To the Backend:
 
 - go to directory backend:
 
 - run command:
 
-- composer update
+<code>composer update</code><br>
 
 - Create .env with:<br><br>
 
@@ -39,7 +39,7 @@ and finnaly run:
 <code>php artisan serve</code><br><br>
 
 
-# For the Frontend:
+# To the Frontend:
 
 - run the command:
 
