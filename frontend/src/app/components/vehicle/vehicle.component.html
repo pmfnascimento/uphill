@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let vehicle of vehicles; let i = index">
+        <div class="card mb-4 box-shadow">
+            <img class="card-img-top"
+                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block; object-fit: cover;"
+                src="{{ vehicle.photo }}"
+                data-holder-rendered="true">
+            <div class="card-body">
+                <p class="card-text">{{ vehicle.name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a type="button" [routerLink]="['/vehicle/', vehicle.id]" class="btn btn-sm btn-outline-secondary">View</a>
+                    </div>
+                    <small class="text-muted">Avg: {{ vehicle.avg }} /Km</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

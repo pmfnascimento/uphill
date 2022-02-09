@@ -1,0 +1,93 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Vehicles</h3>
+        <div class="text-right">
+            <button type="button" class="btn btn-success btn-sm" (click)="openModal(template)">Create</button>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>year</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Avg</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicle of vehicles; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>
+                        <div class="image"><img src="{{ vehicle.photo }}" /></div>
+                    </td>
+                    <td>{{ vehicle.name }}</td>
+                    <td>{{ vehicle.year }}</td>
+                    <td>{{ vehicle.make }}</td>
+                    <td>{{ vehicle.model }}</td>
+                    <td>{{ vehicle.avg }}</td>
+                    <td>
+                        <button type="button" class="btn btn-info btn-sm mr-2"
+                            (click)="openModal(template,vehicle)">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm" (click)="delete(vehicle)">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">{{ modalTitle }}</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" [formControl]="name">
+            <small class="text-danger" *ngIf="name.errors?.['required'] && showErrors"><b>* Name is Required</b></small>
+        </div>
+        <div class="form-group">
+            <label for="name">Year</label>
+            <input type="text" class="form-control" id="year" placeholder="Enter year" [formControl]="year">
+            <small class="text-danger" *ngIf="year.errors?.['required'] && showErrors"><b>* Year is Required</b></small>
+        </div>
+        <div class="form-group">
+            <label for="make">Make</label>
+            <input type="text" class="form-control" id="make" placeholder="Enter make" [formControl]="make">
+            <small class="text-danger" *ngIf="make.errors?.['required'] && showErrors"><b>* Make is Required</b></small>
+        </div>
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" placeholder="Enter Model" [formControl]="model">
+            <small class="text-danger" *ngIf="model.errors?.['required'] && showErrors"><b>* Model is
+                    Required</b></small>
+        </div>
+        <div class="form-group">
+            <label for="avg">Avg</label>
+            <input type="number" class="form-control" id="avg" placeholder="Enter Avg" [formControl]="avg">
+            <small class="text-danger" *ngIf="avg.errors?.['required'] && showErrors"><b>* Avg is Required</b></small>
+        </div>
+        <div class="form-group">
+            <label for="photo">Photo</label>
+            <input type="text" class="form-control" id="photo" placeholder="Enter Url Photo" [formControl]="photo">
+            <small class="text-danger" *ngIf="photo.errors?.['required'] && showErrors"><b>* Photo is
+                    Required</b></small>
+        </div>
+        <hr>
+        <div class="col-md-4 mx-auto mt-3">
+            <button type="button" class="btn btn-success btn-sm btn-block" (click)="save()">{{ btnTitle }}</button>
+        </div>
+
+    </div>
+</ng-template>

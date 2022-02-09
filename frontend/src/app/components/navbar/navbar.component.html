@@ -1,0 +1,39 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light navbar-white elevation-1">
+    <div class="container">
+        <a routerLink="/" class="navbar-brand">
+            <img src="./assets/uphill-logo.png"  height="25px">
+        </a>
+
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav" *ngIf="(router == '/login' || router == '/dashboard')">
+                <li class="nav-item">
+                    <a routerLink="/" class="nav-link">Home</a>
+                </li>
+
+            </ul>
+            <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+                <li class="nav-item" *ngIf="(!loggedIn)">
+                    <a routerLink="/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item dropdown" *ngIf="loggedIn">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        class="nav-link dropdown-toggle">{{ user.name }}</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                        <li *ngIf="(router != '/dashboard')"><a routerLink="/dashboard"class="dropdown-item">Admin Area</a></li>
+                        <li><a [ngStyle]="{'cursor':'pointer'}" (click)="logout()" class="dropdown-item">Logout</a></li>
+                    </ul>
+                </li>
+            
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- /.navbar -->

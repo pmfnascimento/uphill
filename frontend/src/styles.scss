@@ -1,0 +1,23 @@
+
+
+
+
+/* Importing Datepicker SCSS file. */
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@media (min-width: 768px){
+    .main-footer-home {
+        transition: margin-left .3s ease-in-out;
+        margin-left: 0px;
+        bottom: 0;
+    }
+
+   body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer, body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
+        transition: margin-left .3s ease-in-out;
+        margin-left: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+}
