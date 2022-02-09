@@ -8,14 +8,13 @@
 
 - Create .env with:<br><br>
 
-<code>
-APP_URL=http://localhost:8000 <br>
-DB_CONNECTION=mysql<br>
-DB_HOST=127.0.0.1<br>
-DB_PORT=3306<br>
-DB_DATABASE= "Database Name"<br>
-DB_USERNAME=root<br>
-DB_PASSWORD=<br><br>
+<code>APP_URL=http://localhost:8000</code><br>
+<code>DB_CONNECTION=mysql<br></code><br>
+<code>DB_HOST=127.0.0.1<br></code><br>
+<code>DB_PORT=3306<br></code><br>
+<code>DB_DATABASE= "Database Name"</code><br>
+<code>DB_USERNAME=root</code><br>
+<code>DB_PASSWORD=</code><br><br>
 </code>
 
 
@@ -27,19 +26,18 @@ DB_PASSWORD=<br><br>
 
 - run the commands:<br><br>
 
-<code>php artisan migrate
+<code>php artisan migrate</code><br>
 
-php artisan passport:install
+<code>php artisan passport:install</code><br>
 
-php artisan db:seed
+<code>php artisan db:seed</code><br>
 
-php artisan storage:link
+<code>php artisan storage:link</code><br>
 
 and finnaly run:
 
-php artisan serve<br>
-</code>
-<br>
+<code>php artisan serve</code><br><br>
+
 
 # For the Frontend:
 
@@ -55,8 +53,8 @@ and
 
 Default Credencials for admin
 
-<code>email: admin@uphiil.com<br>
-password: password</code>
+<code>email: admin@uphiil.com</code><br>
+<code>password: password</code>
 
 
 Done!
