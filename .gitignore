@@ -43,7 +43,6 @@ frontend/Thumbs.db
 
 
 backend/node_modules
-backend/public/hot
 backend/storage/*.key
 backend/vendor
 backend.env
